@@ -1,0 +1,11 @@
+{
+  "name": "gitis",
+  "version": "1.0.0",
+  "description": "Website_Univeristy",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch layouts/main.scss:./css/style.css --style compressed"
+  },
+  "author": "Job_Kyungu_Lodo",
+  "license": "ISC"
+}

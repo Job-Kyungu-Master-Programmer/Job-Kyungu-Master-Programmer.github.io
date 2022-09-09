@@ -1,0 +1,66 @@
+//joblodo@cdo-global.ru
+//Job_Kyungu_L
+//cdo-global.ru
+
+
+
+
+/* =================Stilyzation ===============================*/ 
+
+
+
+.section-right__notes {
+  .container-notes {
+      .notes__pagination {
+          @include flex-centerY-X();
+          height: 5em;
+
+          > svg {cursor: pointer; max-width: 60px; max-height: 20px}
+
+          .notes-list-paginations {//Blog Element For JS <>
+                @include flex();
+                // justify-content: flex-end;
+                @include reset();
+                overflow-x: auto;
+                list-style-type: none;
+                max-width: 19em;
+
+                &::-webkit-scrollbar {
+                     display: none;
+                }
+
+                .paginations-container {//Container element For JS <>
+                     margin: auto 0;
+                     @include flex-centerY-X();
+                     min-width: 56em;
+
+                 .notes-pagination {//Elements For JS <>
+                      margin-right: 0.80em;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-weight: 500;
+                      border: 1px solid $__Color_primary;
+                      cursor: pointer;
+                      min-width: 2.338em;
+                      min-height: 2.338em;
+
+                      &:hover {
+                          border: none;
+                          color: $__ColorBackBtn;
+                      }
+
+                      &:nth-child(2) {
+                           border: none;
+                           color: $__ColorBackBtn;
+                      }
+
+                      &:last-child {
+                          margin-right: 0;
+                      }
+                }
+            }
+          }
+      }
+  }
+}

@@ -1,0 +1,182 @@
+//Job_Kyungu_L
+//cdo-global.ru
+//joblodo@cdo-global.ru
+
+
+@font-face {
+      font-family: 'Museo Sans Cyrl';
+      src: url('../fonts/MuseoSansCyrl100.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl100.woff2') format('woff2'),
+           url('../fonts/MuseoSansCyrl100Italic.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl100Italic.woff2') format('woff2');
+           font-style: normal;
+           font-weight: 100;
+           font-display: none;
+}
+@font-face {
+      font-family: 'Museo Sans Cyrl';
+      src: url('../fonts/MuseoSansCyrl300.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl300.woff2') format('woff2'),
+           url('../fonts/MuseoSansCyrl300Italic.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl100Italic.woff2') format('woff2');
+           font-style: normal;
+           font-weight: 300;
+           font-display: swap;
+}
+@font-face {
+      font-family: 'Museo Sans Cyrl';
+      src: url('../fonts/MuseoSansCyrl500.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl500.woff2') format('woff2'),
+           url('../fonts/MuseoSansCyrl500Italic.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl500Italic.woff2') format('woff2');
+           font-style: normal;
+           font-weight: 500;
+           font-display: swap;
+}
+@font-face {
+      font-family: 'Museo Sans Cyrl';
+      src: url('../fonts/MuseoSansCyrl700.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl700.woff2') format('woff2'),
+           url('../fonts/MuseoSansCyrl700Italic.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl700Italic.woff2') format('woff2');
+           font-style: normal;
+           font-weight: 700;
+           font-display: swap;
+}
+@font-face {
+      font-family: 'Museo Sans Cyrl';
+      src: url('../fonts/MuseoSansCyrl900.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl900.woff2') format('woff2'),
+           url('../fonts/MuseoSansCyrl900Italic.woff') format('woff'),
+           url('../fonts/MuseoSansCyrl900Italic.woff2') format('woff2');
+           font-style: normal;
+           font-weight: 900;
+           font-display: swap;
+}
+
+
+
+//Import File  Function And Variables
+@import "./variables/variable.scss";
+@import "./function/function.scss";
+//Import File Components 
+@import "./components/header";
+@import "./components/menu";
+@import "./components/home__Video";
+@import "./components/albumVideo";
+@import "./components/albumVideo__notes";
+@import "./components/notesComments";
+@import "./components/notesPaginations";
+
+
+
+
+
+
+*,
+*::before,
+*::after {
+      box-sizing: inherit;
+}
+
+
+
+html,
+body {
+      position: relative;
+      font-size: 1.0vw;
+      font-family: 'Museo Sans Cyrl';
+      // font-size: calc(.0 * 0vw + 15px);
+      box-sizing: border-box;
+      overflow-x: hidden;
+      width: 100%;
+      background-color: $__colorBackground;
+
+      @media (max-width: 700px) {
+            font-size: calc(.0 * 0vw + 15px);
+      }
+}     
+
+.container {
+      margin: 0 auto;
+      max-width: 120em;
+}
+
+
+.header {
+        position: fixed;
+        outline: 1px solid $__Color_primary;
+        z-index: 1;
+        width: 100%;
+        height: 4.20em;
+
+        &__container {
+              @include BetweenCenterY();
+              min-height: 100%;
+              width: 100%;
+
+              .header__left {
+                     @include flex-centerY();
+               }
+            }
+      }
+
+//====End Heder==================== */ 
+
+
+
+
+// The Principale Page > Главная
+/*============ Start Main==========*/ 
+.main {
+        .main-content {
+               padding-top: 4em;
+               @include flex();
+               align-items: stretch;
+
+               .section__right {
+                    flex-grow: 1;
+               }
+               
+        }
+}
+
+/*================End Main and Principal Page================*/ 
+
+
+
+
+
+//The  Second Page > Album , Изобранное 
+/*===Start main Album Page============*/
+.main {
+      .main-content {
+              .section__center {
+                  max-width: 57.938em;
+              }
+              .section__right-notes {}
+      }
+}
+/*=====End main Album Page ============*/ 
+
+
+
+// The Third Page > Comments Users , Заметка  
+/* Start Main Notes Comments Page ========*/ 
+.main {
+       .main-content {
+                   .section-right__notes {
+                          .container-notes {
+                                padding-top: 1.20em;
+                          }
+                   }
+       }
+}
+/*=====End ===============================*/
+
+
+
+
+
+
+

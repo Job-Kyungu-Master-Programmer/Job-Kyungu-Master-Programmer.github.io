@@ -1,0 +1,305 @@
+//Job_Kyungu_L
+//joblodo@cdo-global.ru
+//cdo-global.ru
+
+
+
+
+
+/*============ Home__Video Stylization   === */ 
+
+.section__right {
+      padding: 1.25em 1.875em;
+      overflow-x: hidden;
+
+      .homeVideo__Top {
+             @include Between();
+
+             .homeVideo__title {
+                  @include reset();
+                  font-size: 2.25em;
+                  max-width: 20em;
+             }
+
+             .homeVideo__filterVid {
+                    @include resetBorder();
+                    @include reset();
+                    padding-right: 1em;
+                    font-size: 1.25em;
+                    cursor: pointer;
+                    max-width: 20em;
+                    max-height: 100%;
+                    color: inherit;
+                    background: transparent url('../img/filterVid__rounded.svg') no-repeat right center / 1.875em 2em;
+                    transition: 0.5s ease-in-out;
+
+                        img {
+                            padding-bottom: 0.1em;
+                            transition: 0.5s ease;
+                         }
+
+                         &:hover {
+                            color: $__ColorBackBtn;
+                         }
+                         &:hover img {
+                            transform: translateX(20px);
+                         }
+                   }
+             }
+      }
+
+
+
+
+.homeVideo__Bottom {
+       margin-top: 1.40em;
+        .list-cards__Video {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+              column-gap: 0.80em;
+              row-gap: 0.35em;
+
+              .list-card__Video {
+                   position: relative;
+                   margin-bottom: 1.25em;
+                   display: none;
+                   border: 1px solid  rgba(240, 240, 240, 0.562);
+                   min-height: 25.80em;
+
+                   //Group of children, (video) . Block for the filter, Codes Reserves
+               //     &:nth-child(1) {display:block;} &:nth-child(5) {display:block;}
+               //     &:nth-child(2) {display:block;} &:nth-child(6) {display:block;}
+               //     &:nth-child(3) {display:block;} &:nth-child(7) {display:block;}
+               //     &:nth-child(4) {display:block;} &:nth-child(8) {display:block;}     
+              }
+        }
+}
+
+
+.homeVideo__Bottom {
+       .list-cards__Video {
+            .list-card__Video {
+                 .video__HomeVideo {
+                      position: relative;
+                      max-width: 100%;
+                      height: 15em;
+
+                    .video__home {
+                         width: 100%;
+                         height: 100%;
+                    }
+                 } 
+            }
+       }
+}
+
+
+
+.homeVideo__Bottom {
+        .list-cards__Video {
+               .list-card__Video {
+                      .text__homeVideo {
+                           padding-top: 0.88em;
+                           min-height: 9em;
+                           background: transparent;
+
+                           .text-title__homeVideo {
+                                 @include reset();
+                                 position: relative;
+                                 padding-bottom: 0.563em;
+                                 margin-bottom: 0.50em;
+
+                                 &::after {
+                                       content:"";
+                                       position: absolute;
+                                       left: 0;
+                                       bottom: 0;
+                                       width: 30px;
+                                       height: 3px;
+                                       background-color: $__ColorBackBtn;
+                                 }
+                           }
+
+                           .users__homeVideo {
+                                  position: relative;
+                                 .name-users__homeVideo {
+                                        margin-bottom: 1em;
+                                        color: $__ColorTxtLow;
+                                        max-width: 340px;
+                                        .users__name {
+                                               color: $__ColorTxtBlack;
+                                               font-weight: 400;
+                                        }
+                                 }
+
+                                 .date-post__homeVideo  {
+                                        color: $__ColorTxtLow;
+                                        max-width: 340px;
+                                        .users__post {
+                                               font-weight: 400;
+                                               color: $__ColorTxtBlack;
+                                        }
+                                 }
+
+                                 i { //Element For JS <>
+                                    position: absolute;
+                                    top:1.50em; 
+                                    right:0.20em;
+                                    @include flex-centerY-X();
+                                    cursor: pointer;
+                                    width: 50px; 
+                                    height: 50px;
+                                    background-color: transparent;
+
+                                    &:active{ background-color: $__ColorBackBtn;}
+                                    &:active .start__like {
+                                         fill: $__ColorBtn;
+                                         stroke: $__ColorBtn;
+                                    } 
+                              
+                                   }
+
+                                   .i-active {//Element Active
+                                         background-color: $__ColorBackBtn;
+
+                                         .start__like {
+                                              fill: $__ColorBtn;
+                                              stroke: $__ColorBtn;
+                                         }
+                                   }
+
+                                 .start__like {//Element For JS
+                                      stroke: $__ColorTxtBlack;
+                                      fill: $__ColorBtn;
+                                      cursor: pointer;
+                                      transition:  0.1s all;
+                                      width: 1.80em;
+                                      height: 1.80em;
+
+                                 }
+                           }
+                      }
+               }
+        }
+}
+
+
+//MEDIA QUERIES Top 
+.section__right {//Ver% Mobile
+     padding: 1.25em 0.875em;
+} 
+
+   .section__right { 
+         .homeVideo__Top {
+               @media (max-width: 534px) {
+                    font-size: calc(.1 * 0vw + 13px);
+               .homeVideo__title {
+                         font-size: 1.85em;
+               }
+
+               .homeVideo__filterVid {
+                      font-size: 1em;
+                      background-size: 1.40em  1.60em;
+                      
+                      img {
+                          width: 26%;
+                      }
+               } 
+
+         }
+
+
+         @media  (max-width: 450px) {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  min-height: 5em;
+
+          .homeVideo__filterVid {
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  max-width: 100%;
+                  min-height: 2em;
+                  text-align: right;
+                  background-size: 2em;
+
+               &:active {
+                  background: transparent;
+               }
+
+               img {
+                  margin-left: 0.30em;
+                  max-width: 13%;
+                  max-height: 15%;
+               }
+          }
+       }
+    }
+}
+
+//MEDIA QUERIES  Bottom 
+.homeVideo__Bottom {
+       .list-cards__Video {
+               @media (max-width: 931px) {
+                           grid-template-columns: 1fr 1fr;
+               }
+
+               @media (max-width: 700px) {//Version Mobile ,
+                          grid-template-columns: 100%;
+                          row-gap: 0.60em;
+               }
+
+               .list-card__Video {
+
+                    @media (max-width: 1430px) {
+                              min-height: 33.80em;
+
+                           .video__HomeVideo {
+                              height: 23em;
+                           }
+                    }
+
+                    @media (max-width: 1226px) {
+                              margin: 0;
+                              min-height: 35.80em;
+
+                              &:nth-child(4n) {
+                                   margin: 0;
+                                   margin-right: 0;
+                               }
+    
+                               &:nth-child(3n) {
+                                    margin: 0;
+                                    margin-right: 0;
+                               }
+    
+                               &:last-child {
+                                   margin: 0;
+                                   flex-grow: 0;
+                               }
+                    }
+
+                    @media (max-width: 700px) {//Vers% Mobile
+                               min-height: 38em;
+
+                               .video__HomeVideo {
+                                height: 27em;
+                               }
+                    }
+
+                    @media (max-width: 390px) {
+                         font-size: calc(.1 * 0vw + 14.2px);
+                                  min-height: 27.20em;
+
+                                .video__HomeVideo {
+                                   height: 16em;
+                                }
+
+                                .text-title__homeVideo {
+                                    font-size: 1.38em;
+                                }
+                    }
+               }
+         }
+     }

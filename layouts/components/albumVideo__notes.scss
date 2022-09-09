@@ -1,0 +1,194 @@
+//joblodo@cdo-global.ru
+//cdo-global.ru
+
+
+/*========Stylization============= */ 
+
+
+
+
+
+.main {
+      .main-content {
+            .section__right-notes {
+                   padding-top: 3.22em;
+                   max-width: 20.625em;
+                   max-height: 40.375em;
+
+                   .container__right {
+                               display: flex;
+                               flex-direction: column;
+                               border: 1px solid $__Color_primary;
+                               background: $__ColorBackHeader;
+
+                               .albumVideo-note__title {
+                                    padding: 0.80em 1em;
+                                    font-size: 1.25em;
+                                    font-weight: 600;
+                                    border-bottom: 1px solid $__Color_primary;
+                                    max-width: 100%;
+
+                                    .closePopComments {//Element Hide -> Display in Vers% Mobile
+                                        position: absolute;
+                                        top: -0.40em;
+                                        left: -1.20em;
+                                        display: none;
+                                        font-size: 1.85em;
+                                        cursor: pointer;
+                                        z-index: 200;
+                                        color: $__ColorTxtBlack;
+                                        transition: color 0.3 linear;
+                                    }
+                               }
+
+                               .albumVideo-right__comments {
+                                     max-height: 19.438em;
+                                     padding: 0.30em 1em;
+                                     margin: 0.70em 0;  
+                                     overflow-y: scroll;
+                                     
+
+                                     &::-webkit-scrollbar {
+                                          background-color: $__Color_primary;
+                                          max-width: 0.20em;
+                                     }
+                                     &::-webkit-scrollbar-thumb {
+                                          background-color: $__ColorTxtBlack;
+                                     }
+                                                
+                                     .comments-list {
+
+                                                   .comment-item {//Blog for Elements JS <>
+                                                          margin-bottom: 0.90em;
+                                                          @include flex;
+                                                          justify-content: center;
+                                                          align-items: flex-start;
+                                                          flex-direction: column;
+                                                          max-width: 100%;
+                                                          min-height: 7.20em;
+
+                                                          &:last-child {
+                                                            margin-bottom: 0;
+                                                          }
+
+                                                          .comments__date {//Element For JS <>
+                                                                  margin-bottom: 0.20em;
+                                                                  font-size: 0.75em;
+                                                                  font-weight: 200;
+                                                                  color: $__ColorTxtLow;
+                                                                  max-width: 100%;
+                                                          }
+
+                                                          .comments__text {//Element For JS <>
+                                                                  font-size: 1.1em;
+                                                                  font-weight: 300;
+                                                                  color: $__ColorTxtBlack;
+                                                                  max-width: 100%;
+                                                          }
+                                                }
+                                       }
+                               }
+
+                               .albumVideo-right__textarea {
+                                        @include resetBorder();
+                                        padding: 1em;
+                                        border-top: 1px solid $__Color_primary;
+                                        font-size: 1em;
+                                        background-color: $__colorBackground;
+                               }
+
+                               .album-right__btn {
+                                        @include resetBorder();
+                                        padding: 1.20em;
+                                        text-align: center;
+                                        cursor: pointer;
+                                        color: $__ColorBtn;
+                                        background-color: $__ColorBackBtn;
+                                        transition: 0.5s ease-in-out;
+
+                                        &:hover {
+                                          background-color: $__ColorTxtBlack;
+                                     }
+                               }
+                     }
+            }
+
+            .element-hide {//Element Display In Vers% Mobile
+                  position: fixed;
+                  right: 0;
+                  bottom: 7.45em; 
+                  padding: 0.40em 0.55em;
+                  display: none;
+                  text-align: center; 
+                  line-height: 160%;
+                  width: 5em;
+                  height: 5em;
+                  background-color: $__ColorBackBtn;
+                  border-radius: 3px;
+
+                  .favorites {
+                      position: relative;
+                      animation: moveFavorites 0.99s ease-in-out infinite; 
+                      
+                      @keyframes moveFavorites {
+                        0% {top: 0px;} 
+                        50% {top: 10px;} 
+                        100% {top: 0;}
+                      }
+                }
+
+            }
+      }
+}
+
+
+//MEDIA QUERIES , Comments For users
+.main {
+        .main-content {
+                width: 100%;
+                @media (max-width: 700px) {
+                        .section__right-notes {//Display in JS<>
+                                padding-top: 0;
+                                position:fixed;
+                                top: 6.50em;
+                                right: 0;
+                                max-height: 32em;
+                                transform-origin: bottom right;
+                                transform:  scale(0);
+                                transition: transform 0.6s ease-in-out;
+
+                                .container__right  {
+                                        font-size: calc(.1 * 0vw + 14.23px);
+
+                                .albumVideo-note__title {
+                                         position: relative;
+
+                                         .closePopComments {//Display in Vers% Mobile, Close Pop Comments
+                                              display: block;
+
+                                                &:active {
+                                                   color: $__ColorBackBtn;
+                                                }
+                                         }
+                                }
+
+                                .albumVideo-right__comments {
+                                        height: 0;
+                                        height: 12em;
+
+                                        .comment-item {
+                                                min-height: 0;
+                                        }
+                                }
+                          }
+                        }
+                }
+
+                .element-hide {// Element Js <> -> Display in Vers% Mobile
+                       @media (max-width: 700px) {
+                              display: block;
+                       }
+                }
+
+        }
+}

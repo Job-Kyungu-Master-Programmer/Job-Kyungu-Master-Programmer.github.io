@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+            <link rel="stylesheet" type="text/css" href="./css/normalize.css"/>
+            <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+            <link rel="icon" type="image/x-icon" href="./img/logo-cdo-green.svg"/>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <title> CDO-Global | Избранное видео</title>
+       </head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+       <div class="header__left">
+           <div class="logo">
+               <a href="index.html"><img src="./img/logo-cdo-green.svg" alt="Logo"/>
+               <img src="./img/logo-cdo-black.svg"/></a>
+           </div>
+           <h3 class="header__title"><a href="index.html">На сайт</a></h3>
+       </div>
+       <div class="header__right">
+            <button class="btn__sign-up">
+               Петров С.
+            </button>
+            <input type="search" id="searchInput" class="header-input__search" placeholder="Найти"/>
+            <button class="btn__search"><i class="fas fa-search" ></i></button>
+            <!-- <div class="header__hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div> -->
+            <button class="header__menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+              <svg id="openMenu" width="45" height="45" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+              </svg>
+            </button>
+       </div>
+    </div>
+ </header>
+
+
+  <main class="main">
+    <main class="main-content">
+        <section class="section__left">
+             <div class="container section__left_container">
+              <div class="menu__top">
+                <a href="index.html" class="menu-link menu_link__homePage"><svg class="svg-link" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="path-1-inside-1_1531_15197" fill="white">
+                    <path class="img-link_line" fill-rule="evenodd" clip-rule="evenodd" d="M4 8V21.5C4 21.7761 4.22386 22 4.5 22H19.5C19.7761 22 20 21.7761 20 21.5V8"/>
+                    </mask>
+                    <path class="img-link_line" d="M5.5 8V6.5H2.5V8H5.5ZM21.5 8V6.5H18.5V8H21.5ZM2.5 8V21.5H5.5V8H2.5ZM4.5 23.5H19.5V20.5H4.5V23.5ZM21.5 21.5V8H18.5V21.5H21.5ZM19.5 23.5C20.6046 23.5 21.5 22.6046 21.5 21.5H18.5C18.5 20.9477 18.9477 20.5 19.5 20.5V23.5ZM2.5 21.5C2.5 22.6046 3.39543 23.5 4.5 23.5V20.5C5.05228 20.5 5.5 20.9477 5.5 21.5H2.5Z" fill="white" mask="url(#path-1-inside-1_1531_15197)"/>
+                    <path class="img-link_line" d="M2 10L11.7133 3.20071C11.8854 3.0802 12.1131 3.07914 12.2852 3.19965C13.5326 4.0728 18.5974 7.61816 22 10" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M2 10L11.7133 3.20071C11.8854 3.0802 12.1146 3.0802 12.2867 3.20071L22 10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <mask id="path-5-inside-2_1531_15197" fill="white">
+                    <path class="img-link_line" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 22V12.5C15.5 12.2239 15.2767 12 15.0005 12C14.5733 12 13.9108 12 13.1667 12H10.8333C10.0892 12 9.42665 12 8.99948 12C8.72334 12 8.5 12.2239 8.5 12.5V22"/>
+                    </mask>
+                    <path class="img-link_line" d="M14 22V23.5H17V22H14ZM7 22V23.5H10V22H7ZM17 22V12.5H14V22H17ZM15.0005 10.5C14.5734 10.5 13.9108 10.5 13.1667 10.5V13.5C13.9108 13.5 14.5733 13.5 15.0005 13.5L15.0005 10.5ZM13.1667 10.5H10.8333V13.5H13.1667V10.5ZM10.8333 10.5C10.0892 10.5 9.42664 10.5 8.99946 10.5L8.99949 13.5C9.42666 13.5 10.0892 13.5 10.8333 13.5V10.5ZM7 12.5V22H10V12.5H7ZM8.99946 10.5C7.89288 10.5 7 11.3975 7 12.5H10C10 13.0503 9.55379 13.5 8.99949 13.5L8.99946 10.5ZM17 12.5C17 11.3975 16.1071 10.5 15.0005 10.5L15.0005 13.5C14.4462 13.5 14 13.0503 14 12.5H17Z" fill="white" mask="url(#path-5-inside-2_1531_15197)"/>
+                    </svg>
+                Главная
+                </a>
+                <a href="albumVideo.html" class="menu-link"><svg class="svg-link" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="img-link_line"  d="M13.0856 7.6533L13.2628 8.12291L13.7644 8.13823L19.8204 8.32312L15.063 11.8542L14.639 12.1689L14.7923 12.6742L16.4848 18.2536L11.4082 14.9594L11 14.6945L10.5917 14.9594L5.51516 18.2536L7.2077 12.6742L7.36098 12.1689L6.937 11.8542L2.17965 8.32312L8.23555 8.13823L8.73723 8.12291L8.91439 7.6533L11 2.12484L13.0856 7.6533ZM20.3979 7.89444L20.3975 7.89472L20.3979 7.89444Z" stroke="black" stroke-width="1.5"/></svg>                            
+                Избранное видео
+                 </a>
+                <a href="notes.html" class="menu-link menu_link__choice"><svg class="svg-link" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="img-link_line" fill-rule="evenodd" clip-rule="evenodd" d="M17.0541 19.0041H3.85643C2.91069 19.0041 2.91068 19.0041 2.91068 18.0003L2.91064 2.00035C2.91367 1.00034 2.91371 1.00034 3.85636 0.996582H17.054C17.9967 1.00034 17.9999 0.996567 17.9999 2.00035V18.0003C17.9999 19.0041 17.9999 19.0041 17.0541 19.0041Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M7.62598 5.99874H14.2275" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M7.62598 14.0022H14.2275" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M7.62598 10.0002H14.2275" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M1.49609 5.99874H4.32534" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M1.49609 14.0022H4.13766" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M1.49609 10.0002H4.13766" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                Мои заметки
+                 </a>
+                <a href="#" class="menu-link menu_link__story"><svg class="svg-link" width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="img-link_line" d="M4.51953 9.00393C5.85962 5.22909 9.53418 2.79509 13.5327 3.03367C17.5313 3.27225 20.8903 6.12592 21.772 10.0333C22.6538 13.9407 20.8457 17.9604 17.337 19.893C13.8284 21.8255 9.46469 21.2054 6.63341 18.3718" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M9.99902 15.0063L13.0003 12.005V7.00293" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="img-link_line" d="M7.99825 9.00362H3.99658V5.00195" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                История поиска
+                 </a>
+                </div>
+                 <div class="menu__middle"><!--Eelement Hide -> Element display in Mobile version -->
+                  <div class="container__middle">
+                    <button class="btn__sign-up">
+                        Петров С.
+                     </button>
+                     <input type="search" id="searchInput" class="menu__search" placeholder="Найти"/>
+                     <button class="menu-btn__search"><i class="fas fa-search" ></i></button>  
+                    </div>
+                 </div>
+                 <div class="menu__bottom">
+                      <a href="#" class="menu__confidentiality">Политика конфендициальности</a>
+                      <span class="menu__copyRight">
+                          &#169;2022. Российский институт театрального искусства&nbsp;&mdash; ГИТИС
+                     </span>
+                     <a href="#" class="menu-link__network" style="background-image: url('./img/telegram.svg');"> Телеграм</a>
+                     <a href="#" class="menu-link__network" style="background-image: url('./img/Vk.svg');"> Вконтактe</a>
+                 </div>
+             </div>                                                                        
+         </section>
+          <section class="section__center">
+                  <div class="container__AlbumVideo">
+                         <div class="album-center__top">
+                              <a href="index.html" class="album-top__link">Главная &bull; Теория относительности Эйнштейна</a>
+                              <h1 class="albumVideo__title">Теория относительности Эйнштейна</h1>
+                         </div>
+                         <div class="album-center__middle">
+                              <div class="albumVideo__blog">
+                                <iframe class="album-video" width="1280" height="720" src="https://www.youtube.com/embed/-elj6gxPxY0" title="Теория относительности на пальцах от Стивена Хокинга" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                         </div>
+                         <div class="album-center__down">
+                                <div class="album-users__container">
+                                       <div class="albumVideo__users">
+                                        <div class="name-users__albumVideo">
+                                            Преподаватель: 
+                                            <strong class="users__name"> 
+                                                Федерико Фелинни
+                                            </strong>
+                                        </div>
+                                        <div class="date-post__albumVideo">
+                                            Добавлено: 
+                                            <strong class="users__post">
+                                                12 июля 2021
+                                            </strong>
+                                        </div>
+                                       </div>
+                                       <div class="albumVideo-add__image">
+                                            <span class="content-add">Добавить в избранное</span>
+                                            <svg class="starAdd" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.3424 8.03169L14.5233 8.49312L15.0187 8.50768L21.752 8.70555L16.484 12.469L16.041 12.7855L16.2047 13.3047L18.0903 19.2875L12.3973 15.7319L12 15.4837L11.6027 15.7319L5.90969 19.2875L7.79531 13.3047L7.95896 12.7855L7.51598 12.469L2.24801 8.70555L8.9813 8.50768L9.4767 8.49312L9.65755 8.03169L12 2.05525L14.3424 8.03169ZM5.33523 19.6463C5.33544 19.6462 5.33565 19.646 5.33586 19.6459L5.33523 19.6463ZM12.2328 1.4614C12.2327 1.46158 12.2326 1.46175 12.2326 1.46193L12.2328 1.4614L12 1.37017L12.2328 1.4614Z" stroke="#333" stroke-width="1.5"/>
+                                            </svg>
+                                       </div>
+                                </div>
+                                <div class="albumVideo__text-description">
+                                      <h2 class="description__title">
+                                        Текстовое описание
+                                      </h2>
+                                      <p class="description__content">
+                                        Не&nbsp;следует, однако забывать, что постоянный количественный рост и&nbsp;сфера нашей активности обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании 
+                                        систем массового участия. Таким образом дальнейшее развитие различных форм деятельности в&nbsp;значительной степени обуславливает создание дальнейших направлений развития. 
+                                        Повседневная практика показывает, что сложившаяся структура организации требуют определения и&nbsp;уточнения направлений прогрессивного развития. Идейные соображения высшего порядка, а&nbsp;также дальнейшее развитие различных форм деятельности влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации дальнейших направлений 
+                                        развития. Идейные соображения высшего порядка, а&nbsp;также рамки и&nbsp;место обучения кадров обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании модели развития.
+                                      </p>
+                                      <h3 class="description__title-down">
+                                        Прикрепленные файлы
+                                      </h3>
+                                      <div class="document-download">
+                                        <a href="./img/elementPDF.png"  class="albumVideo-download__link-col-1" download="download"></a>
+                                        <a href="./img/elementPDF.png"  class="albumVideo-download__link-col-2" download="download"></a>
+                                        <div class="element-hide"><!--This element is hidden, but displayed in Mobile version-->
+                                          <svg class="favorites" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0541 19.0041H3.85643C2.91069 19.0041 2.91068 19.0041 2.91068 18.0003L2.91064 2.00035C2.91367 1.00034 2.91371 1.00034 3.85636 0.996582H17.054C17.9967 1.00034 17.9999 0.996567 17.9999 2.00035V18.0003C17.9999 19.0041 17.9999 19.0041 17.0541 19.0041Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7.62598 5.99874H14.2275" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7.62598 14.0022H14.2275" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7.62598 10.0002H14.2275" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.49609 5.99874H4.32534" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.49609 14.0022H4.13766" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.49609 10.0002H4.13766" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg> 
+                                            <span>заметки</span>
+                                        </div>
+                                      </div>
+                                </div>
+                         </div>
+                  </div>
+          </section>
+          <section class="section__right-notes">
+                   <div class="container__right">
+                         <div class="albumVideo-note__title"><i class="fas fa-times closePopComments"></i>Ваши заметки к видео</div>
+                         <form action="#" class="albumVideo-right__comments">
+                              <div class="comments-list">
+                                   <div class="comment-item">
+                                        <div class="comments__date">Заметка от 12.12.22</div>
+                                        <div class="comments__text">Не&nbsp;следует, однако забывать, что постоянный количественный рост сфера нашей активности обеспечивает широкому кругу.</div>
+                                   </div>
+                                    <div class="comment-item">
+                                        <div class="comments__date">Заметка от 12.12.22</div>
+                                        <div class="comments__text">Не&nbsp;следует, однако забывать, что постоянный количественный рост сфера нашей активности обеспечивает широкому кругу.</div>
+                                   </div>
+                                   <div class="comment-item">
+                                        <div class="comments__date">Заметка от 12.12.22</div>
+                                        <div class="comments__text">Не&nbsp;следует, однако забывать, что постоянный количественный рост сфера нашей активности обеспечивает широкому кругу.</div>
+                                   </div>
+                                   <div class="comment-item">
+                                       <div class="comments__date">Заметка от 12.12.22</div>
+                                       <div class="comments__text">Не&nbsp;следует, однако забывать, что постоянный количественный рост сфера нашей активности обеспечивает широкому кругу.</div>
+                                 </div>
+                                 <div class="comment-item">
+                                      <div class="comments__date">Заметка от 12.12.22</div>
+                                     <div class="comments__text">Не&nbsp;следует, однако забывать, что постоянный количественный рост сфера нашей активности обеспечивает широкому кругу.</div>
+                                </div>
+                                <div class="comment-item">
+                                   <div class="comments__date">Заметка от 12.12.22</div>
+                                   <div class="comments__text">Не&nbsp;следует, однако забывать, что постоянный количественный рост сфера нашей активности обеспечивает широкому кругу.</div>
+                               </div>
+                              </div> 
+                         </form>
+                         <textarea class="albumVideo-right__textarea" cols="30" rows="7" placeholder="Введите текст новой заметки"></textarea>
+                         <input type="text" class="inv-classe" style="display: none;"/>
+                         <button id="addBtn" class="album-right__btn">Сохранить заметку</button>
+                    </div>
+            </section>
+       </main>
+     </main>
+     <script type="text/javascript" src="js/app.js"></script> 
+     <script type="text/javascript" src="js/note.js"></script>
+  </body>
+</html>

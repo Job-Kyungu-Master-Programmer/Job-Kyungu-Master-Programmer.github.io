@@ -1,0 +1,96 @@
+
+//#joblodo@cdo-global.ru
+//#Job_Kyungu_L
+
+
+
+// =====The globality of the functions of all the page is here in it's files======
+
+
+
+//Mixins == 
+@mixin  flex {
+      display: flex;
+}
+
+@mixin flex-centerX {
+      display: flex;
+      justify-content: center;
+}
+
+@mixin flex-centerY {
+      display: flex;
+      align-items: center;
+}
+
+@mixin flex-centerY-X {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+
+@mixin around {
+      display: flex;
+      justify-content: space-around;
+}
+@mixin AroundCenterY {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+
+@mixin Between {
+     display: flex;
+     justify-content: space-between;
+}
+@mixin BetweenCenterY {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+
+
+// Button 
+@mixin Btn {
+      min-width: 200px;
+      padding: 12px 20px;
+      color: $__ColorBtn;
+      background-color: $__ColorBackBtn;
+}
+
+
+
+
+
+//Reset MMargin ,Padding , List  And Link 
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin resetLink {
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     color: inherit;
+}
+
+
+@mixin resetList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: inherit;
+}
+
+
+
+
+//Reset Border And Outline  
+@mixin resetBorder {
+      border: none;
+      outline: none;
+}

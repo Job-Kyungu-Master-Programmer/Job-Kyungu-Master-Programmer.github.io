@@ -1,0 +1,299 @@
+//joblodo@cdo-global.ru
+//Job_Kyungu_L
+//cdo-global.ru
+
+
+/*========Stylization============= */ 
+
+
+.main {
+      .main-content {
+            .section__center {
+                   padding: 1.625em 0 0 1.875em; 
+                   margin-right: 1.875em;
+
+            
+                   .container__AlbumVideo {
+                               .album-center__top {
+                                        .album-top__link {
+                                                @include resetLink();
+                                                @include resetBorder();
+                                                margin-bottom: 0.875em;
+                                                display: block;
+                                                font-size: 1em;
+                                                font-weight: 100;
+                                                color: $__Color_primary;
+                                                transition: 0.3s ease-in;
+                                                max-width: 23em;
+
+                                                &:hover {
+                                                     text-decoration: underline;
+                                                     color: $__ColorTxtLow;
+                                                }
+                                        }
+                                        .albumVideo__title {
+                                                @include reset();
+                                                margin-bottom: 0.875em;
+                                                font-size: 2em;
+                                                max-width: 18.438em;
+                                        }
+                               }
+
+                    }
+
+            }
+
+      }
+}
+.main {
+      .main-content {
+              .section__center {
+                      .container__AlbumVideo {
+                        .album-center__middle {
+                            .albumVideo__blog {
+                                  position: relative;
+                                  max-width: 57.938em;
+                                  min-height: 34.375em;
+
+                                  .album-video {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                  }
+                              }
+                         }
+                      }
+              }
+      }
+}
+.main {
+      .main-content {
+            .container__AlbumVideo {
+                     .album-center__down {
+                            padding: 0.875em 0;
+
+                            .album-users__container {
+                                   @include BetweenCenterY();
+                                   padding: 1.25em 0;
+                                   border-top: 1px solid $__Color_primary;
+                                   border-bottom: 1px solid $__Color_primary;
+
+                                   .albumVideo__users {
+                                       .name-users__albumVideo {// Element For JS <>
+                                                position: relative;
+                                                margin-bottom: 10px;
+                                                color: $__ColorTxtLow;
+                                                 max-width: 20em;
+
+                                                &::before { //Element For JS  <>
+                                                      content:"";
+                                                      position: absolute;
+                                                      top: -0.30em;
+                                                      right: 0;
+                                                      width: 3em;
+                                                      height: 3em;
+                                                      transform: translateX(250%);
+                                                      cursor: pointer;
+                                                      background: transparent url('../img/editNote.png') no-repeat left center / contain;
+                                                }
+
+                                                .users__name {
+                                                      font-size: 0.855em;
+                                                      font-weight: 600;
+                                                      color: $__ColorTxtBlack;
+                                                }
+                                       }
+
+                                       .date-post__albumVideo {
+                                                 color: $__ColorTxtLow;
+                                                 max-width: 400px;
+                                                 .users__post {
+                                                      font-size: 0.855em; 
+                                                      font-weight: 500;    
+                                                      color: $__ColorTxtBlack;
+                                                 }
+                                       }
+                                   }
+
+                                   .albumVideo-add__image {
+                                          .content-add {
+                                                font-size: 1em;
+                                                max-width: 7em;
+                                          }
+
+                                          .starAdd { // Element For JS <>
+                                                 margin-left: 1.875em;
+                                                 vertical-align: bottom;
+                                                 cursor:  pointer;
+
+                                                 &:active {
+                                                     stroke: $__ColorTxtLow;
+                                                     fill: $__ColorBackBtn;
+                                                 }
+                                          }
+                                   }
+                            }
+                     }
+            }
+      }
+}
+
+.main {
+      .main-content {
+            .container__AlbumVideo {
+                      .album-center__down {
+                             .albumVideo__text-description {
+                                      padding-top: 1.15em;
+
+                                     .description__title {
+                                           @include reset();
+                                           margin-bottom: 0.855em;
+                                           font-size: 1.26em;
+                                    }
+
+                                    .description__content {
+                                           @include reset();
+                                           margin-bottom: 1.875em;
+                                           font-size: 1em;
+                                           font-weight: 300;
+                                    }
+
+                                    .description__title-down {
+                                           @include reset();
+                                           margin-bottom: 1.23em;
+                                           font-size: 1.25em;
+                                    }
+
+                                    .document-download {
+                                          @include flex();
+                                          max-width: 400px;
+
+                                          .albumVideo-download__link-col-1 {
+                                            @include resetLink();
+                                            padding-left: 1.855em;
+                                            margin-right: 1.23em;
+                                            display: block;
+                                            font-size: 0.855em;
+                                            border: none;
+                                            outline: none;
+                                            width: 145px;
+                                            height: 50px;
+                                            color: $__ColorTxtLow;
+                                            background: transparent url('../img/pdfelement.png') no-repeat left center / contain;
+                                   }
+
+                                   .albumVideo-download__link-col-2 {
+                                       @include resetLink();
+                                       padding-left: 1.855em;
+                                       display: block;
+                                       font-size: 0.855em;
+                                       border: none;
+                                       outline: none;
+                                       width: 140px;
+                                       height: 50px;
+                                       color: $__ColorTxtLow;
+                                       background: transparent url('../img/docelement.png') no-repeat left center / contain;
+                                      }
+                                    }
+                             }
+                      }
+            }
+      }
+}
+
+
+// MEDIA QUERIES ,  section -Center Video 
+  .main {
+        .main-content {//This is the same as in AlbumNotes , <main-content>
+                .section__center {
+                     @media (max-width: 700px) {
+                              margin-right: 0;
+                              padding: 1.35em 0.75em 0 0.75em;
+                              width: 100%;
+                         .container__AlbumVideo {
+                               .album-center__top {
+                                    .album-top__link {
+                                                margin-bottom: 1.50em;
+                                                font-size: 0.80em;
+                                                color: $__ColorTxtLow;   
+                                       } 
+                                       .albumVideo__title {
+                                          @media (max-width: 390px) {
+                                                font-size: 1.30em;
+                                          }
+                                    } 
+                               }
+
+                               .album-center__down {
+                                    font-size: calc(.1 * 0vw + 13px);
+                                    line-height: 130%;
+                                    
+                                     .album-users__container {
+                                           align-items: baseline;
+                                           justify-content: flex-start;
+                                           flex-direction: column;
+
+                                           .name-users__albumVideo{
+                                                &::before {
+                                                      content:"";
+                                                      position: absolute;
+                                                      top: -1em;
+                                                      right: 0;
+                                                      width: 2em;
+                                                      height: 2em;
+                                                      transform: translateX(250%);
+                                                      cursor: pointer;
+                                                      background: transparent url('../img/editNote.png') no-repeat left center / contain;
+                                                }
+
+                                                @media (max-width: 335px) {
+                                                      &::before {
+                                                            content:"";
+                                                            top: -1em;
+                                                            right: 2em;
+                                                      }
+                                                }
+                                           }
+
+                                           .date-post__albumVideo {
+                                                margin-bottom: 10px;
+                                           }
+                                     }
+                               }
+                         }
+                     }
+                }
+        }
+  }
+
+  .main {
+      .main-content {
+              .section__center {
+                      .container__AlbumVideo {
+                        .album-center__middle {
+                            .albumVideo__blog {
+                               @media (max-width: 390px) {
+                                  position: relative;
+                                     width: 100%;
+                                     min-height: 23.375em;
+
+                              @media (max-width: 332px) {
+                                      min-height: 19em;
+                              }
+
+                                  .album-video {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                  }
+                              }
+                            }
+                         }
+                      }
+              }
+      }
+}

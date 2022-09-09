@@ -1,0 +1,242 @@
+//joblodo@cdo-global.ru
+//Job_Kyungu_L
+
+
+
+
+
+/*=============Menu Stylization */ 
+.section__left {
+   border: 1px solid $__Color_primary;
+   border-top: none;
+   max-width: 18.75em;
+   height: 0;
+   min-height: 51.625em;
+
+  &_container {
+        @include flex-centerY();
+        align-items: stretch;
+        flex-direction: column;
+
+        .menu__top {
+             padding: 1.25em;
+             min-height: 34.688em;
+        }
+
+        .menu__bottom {
+             padding: 1.875em;
+             min-height: 16.875em;
+             border-top: 1px solid $__Color_primary;
+        }
+  } 
+}
+
+
+
+
+.section__left{background-color: $__ColorBackHeader;}
+.menu__top {
+
+   .menu-link {
+        @include resetLink();
+        @include resetBorder();
+        position: relative;
+        padding: 0.938em 0 0.938em  2.560em;
+        margin-bottom: 1.063em;
+        display: block;
+        font-size: 1.063em;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: left;
+        min-width: 15em;
+        color: $__ColorTxtBlack;
+        transition: background-color 0.4s ease-in-out, color 0.6s linear;
+
+            svg {
+              position: absolute;
+              left: 0.80em;
+              top: 0.80em;
+              width: 1.25em;
+              height: 1.26em;
+              vertical-align: top;
+
+              .img-link_line {
+                    transition: stroke  0.4s ease-in;
+              }
+          }
+
+          .img-link_line {
+            transition:  0.4s linear;
+           }
+
+           &:hover {
+                color: $__ColorBtn; 
+                background-color: $__ColorBackBtn;
+                transition:  0.4s ease-in-out;
+
+                .img-link_line {
+                  stroke: $__ColorBtn;
+                 }
+           }
+
+           &:first-child {
+            color: $__ColorBtn;
+            background-color: $__ColorBackBtn;
+         }
+      }
+}
+
+
+
+.menu__middle {//Eelement Hide -> Element display in Mobile version
+      padding: 0 0.30em 0 2.45em;
+      display: none;
+      min-height: 10em;
+
+      .container__middle {
+            .btn__sign-up {
+               padding-left: 1em; 
+               margin-right: 1.25em;
+               margin-bottom: 1em;
+               @include resetBorder();
+               font-size: 1.20em;
+               font-weight: 300;
+               cursor: pointer;
+               min-width: 5.875em;
+               background: transparent url('../img/user_sing-up.svg') no-repeat left center / 1.25em;
+               transition: 0.6s ease;
+               min-width: 8em;
+               min-height: 3em;
+               color: inherit;
+  
+               &:hover {
+                    color: $__ColorBackBtn;
+               }
+            }
+
+
+            .menu__search {
+                  @include resetBorder();
+                  padding: 0.75em;
+                  background-color: transparent;
+                  border-bottom: 1px solid $__Color_primary;
+                  border-radius: none;
+
+                  &:focus {
+                      border-bottom: 2px solid $__ColorBackBtn;
+                  }
+            }
+
+            .menu-btn__search {
+                  padding: 0.70em 0.80em;
+                  @include resetBorder();
+                  color: $__ColorBtn;
+                  cursor: pointer;
+                  background-color: $__ColorBackBtn;
+                  transition: background-color 0.5s ease-in-out;;
+
+                  &:hover {
+                     background-color: $__ColorTxtBlack;
+                  }
+            }
+      }
+}
+
+
+
+
+.menu__bottom {
+       a,span {
+            @include resetBorder();
+            display: block;
+            font-size: 0.813em;
+            font-weight: 300;
+       }
+
+       .menu-link__network {
+              padding-left: 1.688em;
+              margin-bottom: 0.63em;
+              text-decoration: none;
+              color: $__ColorTxtLow;
+              background-repeat: no-repeat;
+              background-size: 0.938em 0.938em;
+              transition: 0.5s ease;
+
+              &:last-child {
+                  margin-bottom: 0;
+              }
+
+              &:hover {
+                  text-decoration: underline;
+              }
+       }
+       
+       .menu__confidentiality {
+              margin-bottom: 1.50em;
+              text-decoration: underline;
+              color: $__ColorTxt;
+              transition: 0.5s all;
+
+              &:hover {
+                  color: $__ColorBackBtn;
+              }
+          }
+
+          .menu__copyRight {
+                margin-bottom: 1.50em;
+          }  
+}
+
+
+//MEDIA QUERIES ,Menu 
+.section__left {
+    @media (max-width: 700px) {
+            position: fixed;
+            top: 4.15em;
+            left: -200%;
+            z-index: 20;
+            font-size: calc(.1 * 0vw + 14.85px);
+            min-width: 88.20%;
+            transition: left 0.6s ease-in-out;
+            display: block;
+            min-height: 100%;
+            z-index: 50;
+
+
+            .menu__top {
+                padding: 1.50em;
+                min-height: 1.30em;
+
+                .menu-link {
+                    font-size: 1.10em;
+                    font-weight: 300;
+                    width: 0;
+                    min-width: 14em;
+                }
+            }
+
+            .menu__bottom {
+                 padding: 0.70em 1.50em;
+                 min-height: 8%;
+            }
+   }
+}
+
+.menu__middle {
+     @media (max-width: 700px) {//Element display in Mobile version
+            display: block;
+     }
+}
+
+
+.menuStyle {// Add the Classe For Toggler In JS <>
+   position: fixed;
+   top: 4.15em;
+   left: 0;
+   z-index: 20;
+   min-width: 88.20%;
+   transition: left 0.8s ease-in-out;
+   display: block;
+   min-height: 100%;
+   z-index: 50;
+}

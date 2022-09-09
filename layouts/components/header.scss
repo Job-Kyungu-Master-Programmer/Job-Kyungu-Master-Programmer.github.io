@@ -1,0 +1,191 @@
+//joblodo@cdo-global.ru
+//Job_Kyungu_L
+
+
+
+/*========Stylization============= */ 
+
+.header{background-color: $__ColorBackHeader;}
+
+
+.header__left {
+     @include BetweenCenterY();
+     padding-left: 2.30em;
+     min-width: 24.47em; 
+
+
+         .logo {
+          
+              a {
+               @include resetBorder();
+               @include flex();
+                 img {
+                    width: 4.83em;
+                    height: 1.95em;
+                 }
+              }
+         }
+
+
+         .header__title {
+               @include reset();
+               font-size: 1.125em;
+               font-weight: 100;
+
+               > a {
+                      @include resetLink();
+                      @include resetBorder();
+                      transition: 0.5s all;
+
+                      &:hover {
+                           color: $__ColorBackBtn;
+                      }
+               }
+         }
+}
+
+
+
+.header__right {
+    @include flex();
+    justify-content: flex-end;
+
+       .btn__sign-up {
+             padding-left: 1.75em; 
+             margin-right: 1.25em;
+             @include resetBorder();
+             font-size: 1em;
+             font-weight: 300;
+             cursor: pointer;
+             min-width: 5.875em;
+             background: transparent url('../img/user_sing-up.svg') no-repeat left center / 1.25em;
+             transition: 0.6s ease;
+
+             &:hover {
+                  color: $__ColorBackBtn;
+             }
+        }
+
+
+        
+        .header-input__search {/// Element  For JS <>
+                 @include resetBorder();
+                 padding: 0 1em;
+        }
+        
+        .btn__search {
+               @include resetBorder();
+               padding: 1.52em;
+               color: $__ColorBtn;
+               cursor: pointer;
+               background-color: $__ColorBackBtn;
+               transition: 0.5s ease-in-out;
+
+                &:hover {
+                      background-color: $__ColorTxtBlack;
+                }
+        }
+
+        .header__menu {//Element For JS <> -> Menu
+          display: none;
+          z-index: 1200;
+  }
+
+        
+}
+
+
+//MEDIA QUERIES
+.header {
+     @media (max-width: 700px) {
+           font-size: calc(.1 * 0vw + 15px);
+
+           &__title {
+               display: none;
+           }
+
+           &__left  {
+                 padding-left: 0.75em;
+                 min-width: 0;
+           }
+
+           &__right {    
+                button, input {
+                    display: none;
+                } 
+          }
+
+          // &__hamburger {
+          //        margin-right: 1.30em;
+          //        position: relative;
+          //        max-width: 40px;
+          //        min-height: 27px;
+          //        cursor: pointer;
+                
+          //        span {
+
+          //            display: block;
+          //            margin-bottom: 5px;
+          //            border-radius: 4px;
+          //            width: 39px;
+          //            height: 5px;
+          //            background: $__ColorTxtLow;
+          //           //  transition: 0.5s all;
+
+          //            &:last-child {
+          //                 margin-bottom: 0;
+          //            }
+          //        }
+          //  }
+                         
+          .header__menu {
+               background-color: transparent;
+               border: none;
+               outline: none;
+               cursor: pointer;
+               display: flex;
+               padding: 0;
+
+          @media (max-width: 390px) {
+               margin-right: 0.45em;
+               z-index: 1200;
+          }
+               
+          }
+          .line {
+               fill: none;
+               stroke: $__ColorTxtBlack;
+               stroke-width: 6;
+               transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+               stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          .line1 {
+               stroke-dasharray: 60 207;
+               stroke-width: 6;
+          }
+          .line2 {
+               stroke-dasharray: 60 60;
+               stroke-width: 6;
+          }
+          .line3 {
+               stroke-dasharray: 60 207;
+               stroke-width: 6;
+          }
+          .opened .line1 {
+               stroke-dasharray: 90 207;
+               stroke-dashoffset: -134;
+               stroke-width: 6;
+          }
+          .opened .line2 {
+               stroke-dasharray: 1 60;
+               stroke-dashoffset: -30;
+               stroke-width: 6;
+          }
+          .opened .line3 {
+               stroke-dasharray: 90 207;
+               stroke-dashoffset: -134;
+               stroke-width: 6;
+          }
+          
+     }    
+}
